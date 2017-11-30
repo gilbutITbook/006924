@@ -1,0 +1,5 @@
+import urllib.request
+from bs4 import BeautifulSoup
+req = urllib.request.urlopen('http://www.gilbut.co.kr/company/main.aspx')
+soup = BeautifulSoup(req,"html.parser")
+print(soup.find('h2').img['alt'])
